@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502A2D71D3AF00D8AC4D /* +Views.swift */; };
+		C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */; };
 		C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F604D2D705FD7003CD40D /* NotDefteriAppApp.swift */; };
 		C83F60522D705FD9003CD40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83F60512D705FD9003CD40D /* Assets.xcassets */; };
 		C83F60552D705FD9003CD40D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83F60542D705FD9003CD40D /* Preview Assets.xcassets */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		C819502A2D71D3AF00D8AC4D /* +Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Views.swift"; sourceTree = "<group>"; };
+		C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
 		C83F604A2D705FD7003CD40D /* NotDefteriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotDefteriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83F604D2D705FD7003CD40D /* NotDefteriAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDefteriAppApp.swift; sourceTree = "<group>"; };
 		C83F60512D705FD9003CD40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				C83F609D2D70852F003CD40D /* LoginViewModel.swift */,
 				C83F60A32D708A9A003CD40D /* MainViewModel.swift */,
 				C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */,
+				C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */,
 				C83F609E2D70852F003CD40D /* LoginViewModel.swift in Sources */,
 				C83F60AD2D70A20C003CD40D /* BackgroundTheme.swift in Sources */,
+				C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */,
 				C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */,
 				C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */,
 				C89BD7E02D710677001FE1B3 /* TaskViewModel.swift in Sources */,

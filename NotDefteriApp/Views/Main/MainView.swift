@@ -25,7 +25,7 @@ struct MainView: View {
                         }
                 }
                 .onAppear(){
-                    UITabBar.appearance().backgroundColor = .lightGray
+                    UITabBar.appearance().backgroundColor = .secondarySystemGroupedBackground
                 }
                 .tint(.cyan)
             }else{

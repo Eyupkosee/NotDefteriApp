@@ -9,14 +9,12 @@ import SwiftUI
 
 struct AddTodoView: View {
     
-    @State var oylesine : String = ""
-    @State private var taskDate : Date = .init()
-    @State private var taskColor : String = "taskColor1"
+    @StateObject var viewModel = AddTodoViewModel()
+
+    
+   
     
     
-    @State private var selectedCategory: TaskCategory = .kişisel
-    
-    @State private var selectedImage: UIImage?
     @State private var isImagePickerShowing = false
 
     
@@ -29,10 +27,11 @@ struct AddTodoView: View {
                         .font(.caption)
                         .foregroundStyle(.gray)
                     
-                    TextField("Akşam 8 de toplantı var.", text: $oylesine)
+                    TextField("Akşam 8 de toplantı var.", text: $viewModel.title)
                         .foregroundColor(.black)
                         .padding(.vertical, 10)
                         .padding(.horizontal,15)
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
                         .background(.white.shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
                     
                 })
@@ -43,10 +42,10 @@ struct AddTodoView: View {
                         .font(.caption)
                         .foregroundStyle(.gray)
                     
-                    TextEditor(text: $oylesine)
+                    TextEditor(text: $viewModel.detail)
                         .frame(height: UIScreen.main.bounds.height / 9)
                         .foregroundColor(.black)
-                        .font(.system(size: 18, weight: .heavy, design: .rounded))
+                        .font(.system(size: 18, weight: .regular, design: .rounded))
                         .padding(.vertical, 10)
                         .padding(.horizontal,15)
                         .background(.white.shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
@@ -63,7 +62,7 @@ struct AddTodoView: View {
                         HStack(spacing: 10) {
                             ForEach(TaskCategory.allCases) { category in
                                 Button(action: {
-                                    selectedCategory = category
+                                    viewModel.category = category
                                 }) {
                                     HStack(spacing: 4) {
                                         Image(systemName: category.icon)
@@ -72,8 +71,8 @@ struct AddTodoView: View {
                                     }
                                     .padding(.vertical, 6)
                                     .padding(.horizontal, 10)
-                                    .background(selectedCategory == category ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
-                                    .foregroundColor(selectedCategory == category ? .blue : .primary)
+                                    .background(viewModel.category == category ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
+                                    .foregroundColor(viewModel.category == category ? .blue : .primary)
                                     .cornerRadius(8)
                                 }
                             }
@@ -92,7 +91,7 @@ struct AddTodoView: View {
                             .font(.caption)
                             .foregroundStyle(.gray)
                         
-                       DatePicker("", selection: $taskDate)
+                        DatePicker("", selection: $viewModel.createDate)
                             .datePickerStyle(.compact)
                             .scaleEffect(0.9,anchor: .leading)
                         
@@ -117,12 +116,12 @@ struct AddTodoView: View {
                                     .background(content: {
                                         Circle()
                                             .stroke(lineWidth: 1.5)
-                                            .opacity(taskColor == color ? 1 : 0)
+                                            .opacity(viewModel.tint == color ? 1 : 0)
                                     })
                                     .hSpacing(.center)
                                     .contentShape(.rect)
                                     .onTapGesture {
-                                        taskColor = color
+                                        viewModel.tint = color
                                     }
                             }
                         }
@@ -136,37 +135,29 @@ struct AddTodoView: View {
                 .padding(.top,5)
                 
 
+             
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Todo Görseli")
                         .font(.caption)
                         .foregroundStyle(.gray)
                     
-                    Button(action: {
-                        isImagePickerShowing = true
-                    }) {
-                        ZStack {
-                            if let selectedImage = selectedImage {
+                    ZStack(alignment: .topTrailing) {
+                        Button(action: {
+                            isImagePickerShowing = true
+                        }) {
+                            if let imageData = viewModel.imageData, let selectedImage = UIImage(data: imageData) {
                                 Image(uiImage: selectedImage)
                                     .resizable()
                                     .scaledToFill()
                                     .frame(maxWidth: .infinity)
-                                    .aspectRatio(16/9, contentMode: .fill) // Sabit oran kullanıyoruz, ancak yükseklik sınırlaması yok
+                                    .frame(height: 180)
                                     .clipped()
                                     .cornerRadius(10)
-                                    .overlay(
-                                        Image(systemName: "pencil.circle.fill")
-                                            .font(.title)
-                                            .foregroundColor(.white)
-                                            .padding(8)
-                                            .background(Color.black.opacity(0.6), in: Circle())
-                                            .padding(8),
-                                        alignment: .topTrailing
-                                    )
                             } else {
                                 Rectangle()
                                     .fill(Color.gray.opacity(0.1))
                                     .frame(maxWidth: .infinity)
-                                    .aspectRatio(16/9, contentMode: .fill) // Oranlı boyut, sabit yükseklik yok
+                                    .frame(height: 180)
                                     .cornerRadius(10)
                                     .overlay(
                                         VStack(spacing: 8) {
@@ -179,14 +170,29 @@ struct AddTodoView: View {
                                     )
                             }
                         }
+                        
+                        if viewModel.imageData != nil {
+                            Button(action: {
+                                isImagePickerShowing = true
+                            }) {
+                                Image(systemName: "pencil.circle.fill")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .padding(8)
+                                    .background(Color.black.opacity(0.6), in: Circle())
+                            }
+                            .padding(8)
+                        }
                     }
                     .sheet(isPresented: $isImagePickerShowing) {
-                        ImagePicker(selectedImage: $selectedImage)
+                        ImagePicker(selectedImage: Binding(
+                            get: { viewModel.imageData.flatMap { UIImage(data: $0) } },
+                            set: { newImage in viewModel.imageData = newImage?.jpegData(compressionQuality: 1.0) }
+                        ))
                     }
                 }
                 .padding(.top, 5)
-                
-                
+
                 
                 
                 
@@ -194,12 +200,7 @@ struct AddTodoView: View {
                 
                 Button {
                     // Saving Data
-                    do{
-                      
-                    }catch{
-                        print(error.localizedDescription)
-                    }
-                    
+                    viewModel.save()
                     
                 } label: {
                     Text("Todo Oluştur")
@@ -209,13 +210,15 @@ struct AddTodoView: View {
                         .foregroundStyle(.black)
                         .hSpacing(.center)
                         .padding(.vertical, 12)
-                        .background(Color(taskColor), in: .rect(cornerRadius: 10))
+                        .background(Color(viewModel.tint), in: .rect(cornerRadius: 10))
                 }
-                .disabled(oylesine == "")
-                .opacity(oylesine == "" ? 0.5 : 1)
+//                .disabled($viewModel.title == "")
+//                .disabled($viewModel.detail == "")
+//                .opacity($viewModel.title == "" ? 0.5 : 1)
+//                .opacity($viewModel.detail == "" ? 0.5 : 1)
                        
             }
-            .padding(15)
+            .padding(.horizontal, 15)
 
         }
        
