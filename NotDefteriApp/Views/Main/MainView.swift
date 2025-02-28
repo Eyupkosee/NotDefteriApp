@@ -24,6 +24,10 @@ struct MainView: View {
                             Label("Profile", systemImage: "person.circle")
                         }
                 }
+                .onAppear(){
+                    UITabBar.appearance().backgroundColor = .lightGray
+                }
+                .tint(.cyan)
             }else{
                 LoginView()
             }

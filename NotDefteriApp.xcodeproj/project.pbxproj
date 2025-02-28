@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502A2D71D3AF00D8AC4D /* +Views.swift */; };
 		C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F604D2D705FD7003CD40D /* NotDefteriAppApp.swift */; };
 		C83F60522D705FD9003CD40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83F60512D705FD9003CD40D /* Assets.xcassets */; };
 		C83F60552D705FD9003CD40D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83F60542D705FD9003CD40D /* Preview Assets.xcassets */; };
@@ -48,9 +49,13 @@
 		C83F60A82D70A097003CD40D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F60A72D70A097003CD40D /* ProfileView.swift */; };
 		C83F60AD2D70A20C003CD40D /* BackgroundTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F60AC2D70A20C003CD40D /* BackgroundTheme.swift */; };
 		C83F60AF2D70A282003CD40D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F60AE2D70A282003CD40D /* Color.swift */; };
+		C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */; };
+		C89BD7E02D710677001FE1B3 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */; };
+		C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7E12D711479001FE1B3 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C819502A2D71D3AF00D8AC4D /* +Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Views.swift"; sourceTree = "<group>"; };
 		C83F604A2D705FD7003CD40D /* NotDefteriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotDefteriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83F604D2D705FD7003CD40D /* NotDefteriAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDefteriAppApp.swift; sourceTree = "<group>"; };
 		C83F60512D705FD9003CD40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +74,9 @@
 		C83F60A72D70A097003CD40D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C83F60AC2D70A20C003CD40D /* BackgroundTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTheme.swift; sourceTree = "<group>"; };
 		C83F60AE2D70A282003CD40D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		C89BD7E12D711479001FE1B3 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +187,7 @@
 				C83F60952D706DB2003CD40D /* RegisterViewModel.swift */,
 				C83F609D2D70852F003CD40D /* LoginViewModel.swift */,
 				C83F60A32D708A9A003CD40D /* MainViewModel.swift */,
+				C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,6 +198,8 @@
 				C83F60972D706F1E003CD40D /* Encodable.swift */,
 				C83F60AC2D70A20C003CD40D /* BackgroundTheme.swift */,
 				C83F60AE2D70A282003CD40D /* Color.swift */,
+				C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */,
+				C819502A2D71D3AF00D8AC4D /* +Views.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				C83F60A52D708B22003CD40D /* TodoView.swift */,
+				C89BD7E12D711479001FE1B3 /* AddTodoView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -329,15 +341,19 @@
 				C83F60632D706597003CD40D /* Task.swift in Sources */,
 				C83F60A82D70A097003CD40D /* ProfileView.swift in Sources */,
 				C83F60982D706F1E003CD40D /* Encodable.swift in Sources */,
+				C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */,
 				C83F60962D706DB2003CD40D /* RegisterViewModel.swift in Sources */,
 				C83F60A22D708A14003CD40D /* MainView.swift in Sources */,
 				C83F60A02D708552003CD40D /* LoginView.swift in Sources */,
 				C83F609A2D707053003CD40D /* RegisterView.swift in Sources */,
 				C83F60A62D708B22003CD40D /* TodoView.swift in Sources */,
 				C83F60AF2D70A282003CD40D /* Color.swift in Sources */,
+				C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */,
 				C83F609E2D70852F003CD40D /* LoginViewModel.swift in Sources */,
 				C83F60AD2D70A20C003CD40D /* BackgroundTheme.swift in Sources */,
 				C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */,
+				C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */,
+				C89BD7E02D710677001FE1B3 /* TaskViewModel.swift in Sources */,
 				C83F60612D706590003CD40D /* User.swift in Sources */,
 				C83F60A42D708A9A003CD40D /* MainViewModel.swift in Sources */,
 			);
