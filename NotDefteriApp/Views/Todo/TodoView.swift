@@ -12,7 +12,7 @@ import FirebaseAuth
 struct TodoView: View {
     
     @StateObject var viewModel : TodoViewModel
-  
+    
     
     var body: some View {
         NavigationView {
@@ -27,6 +27,27 @@ struct TodoView: View {
                         .foregroundColor(.white)
                         .italic()
                     
+                    
+                    // Arama Çubuğu ve Kategori Seçici
+                    HStack {
+                        TextField("Notlarda ara...", text: $viewModel.searchText)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .frame(minWidth: 200, maxWidth: .infinity)
+                            .padding(.leading)
+                        
+                        Picker("Kategori", selection: $viewModel.selectedCategory) {
+                            Text("Tümü").tag(TaskCategory?.none)
+                            ForEach(TaskCategory.allCases) { category in
+                                Text(category.rawValue).tag(category as TaskCategory?) 
+                            }
+                        }
+                        .pickerStyle(MenuPickerStyle())
+                        .frame(width: 110)
+                        .tint(.white)
+                    }
+                    .padding(.horizontal)
+
+
                     
                     
                     // Todo listesi
@@ -51,8 +72,8 @@ struct TodoView: View {
                             .padding()
                         } else {
                             LazyVStack(spacing: 12) {
-                                ForEach(viewModel.tasks) { task in
-                                    TodoListItemView(todo: task)
+                                ForEach(viewModel.filteredTasks) { task in
+                                    TodoListItemView(viewModel: TodoListItemViewModel(), todo: task)
                                         .padding(.horizontal)
                                 }
                             }

@@ -16,8 +16,11 @@ class TodoViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var addingNewTask :Bool = false
     
+    @Published var searchText: String = ""
+    @Published var selectedCategory: TaskCategory? = nil
+    
+    
     private let db = Firestore.firestore()
-    private let storage = Storage.storage().reference()
     
     var userId: String {
         Auth.auth().currentUser?.uid ?? ""
@@ -28,7 +31,6 @@ class TodoViewModel: ObservableObject {
     }
     
     func fetchTasks() {
-        // Kullanıcı giriş yapmamışsa, işlemi sonlandır
         guard !userId.isEmpty else {
             errorMessage = "Kullanıcı giriş yapmamış"
             return
@@ -36,7 +38,6 @@ class TodoViewModel: ObservableObject {
         
         isLoading = true
         
-        // Belirttiğiniz yapıya uygun şekilde sorgulamayı düzenledim
         db.collection("users")
             .document(userId)
             .collection("todos")
@@ -58,17 +59,25 @@ class TodoViewModel: ObservableObject {
                 
                 self.tasks = documents.compactMap { document -> Task? in
                     do {
-                        // FirebaseFirestoreSwift'in FirestoreDecodable protokolünü kullanarak dönüştürme
-                        let task = try document.data(as: Task.self)
-                        return task
+                        return try document.data(as: Task.self)
                     } catch {
-                        print("Doküman dönüştürme hatası: \(error)")
+                        print("Döküman dönüştürme hatası: \(error)")
                         return nil
                     }
                 }
             }
     }
 
+        
+        // Arama ve kategori filtresini uygulayan hesaplanmış özellik
+        var filteredTasks: [Task] {
+            tasks.filter { task in
+                let matchesSearch = searchText.isEmpty || task.title.localizedCaseInsensitiveContains(searchText)
+                let matchesCategory = selectedCategory == nil || task.category == selectedCategory
+                return matchesSearch && matchesCategory
+            }
+        }
+    
     
 }
 

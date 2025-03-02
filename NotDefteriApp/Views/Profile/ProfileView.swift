@@ -2,9 +2,10 @@
 //  ProfileView.swift
 //  NotDefteriApp
 //
-//  Created by eyüp köse on 27.02.2025.
+//  Created by eyüp köse on 3.03.2025.
 //
 
+import Foundation
 import SwiftUI
 import FirebaseAuth
 
