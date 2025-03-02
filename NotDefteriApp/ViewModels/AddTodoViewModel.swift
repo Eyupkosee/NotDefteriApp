@@ -17,10 +17,12 @@ class AddTodoViewModel : ObservableObject {
     @Published var title: String = ""
     @Published var detail: String = ""
     @Published var imageData : Data?
-    @Published var isDone : Bool = false
     @Published var category : TaskCategory = .iş
     @Published var tint : String = "taskColor1"
-    @Published var createDate : Date = Date()
+    @Published var dueDate = Date()
+    
+   
+
     
     init() {}
 
@@ -34,7 +36,7 @@ class AddTodoViewModel : ObservableObject {
         if let imageData = imageData {
             uploadImageToFirebase(imageData: imageData) { imageUrl in
                 // imageData'yı UIImage'a dönüştürme işlemi
-                let newItem = Task(id: newId, title: self.title, detail: self.detail, image: UIImage(data: imageData), createDate: self.createDate, isDone: false, tint: self.tint, category: self.category)
+                let newItem = Task(id: newId, title: self.title, detail: self.detail, image: UIImage(data: imageData), dueDate: self.dueDate.timeIntervalSince1970, createDate: Date().timeIntervalSince1970, isDone: false, tint: self.tint, category: self.category)
                 
                 
                 
@@ -54,7 +56,8 @@ class AddTodoViewModel : ObservableObject {
                 title: self.title,
                 detail: self.detail,
                 image: nil,  // Resim yoksa image nil
-                createDate: self.createDate,
+                dueDate: self.dueDate.timeIntervalSince1970,
+                createDate: Date().timeIntervalSince1970,
                 isDone: false,
                 tint: self.tint,
                 category: self.category
@@ -100,5 +103,6 @@ class AddTodoViewModel : ObservableObject {
             }
         }
     }
+    
    
 }

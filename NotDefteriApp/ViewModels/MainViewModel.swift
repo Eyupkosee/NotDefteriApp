@@ -9,6 +9,7 @@ import Foundation
 import FirebaseAuth
 
 class MainViewModel: ObservableObject {
+    //Burayı silebilirim
     @Published var currentUserId : String = ""
     private var handler: AuthStateDidChangeListenerHandle?
     

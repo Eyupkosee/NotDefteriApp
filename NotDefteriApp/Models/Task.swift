@@ -13,7 +13,8 @@ struct Task: Codable, Identifiable {
     let title: String
     let detail: String?
     let imageData: Data?
-    let createDate: Date
+    let dueDate: TimeInterval
+    let createDate: TimeInterval
     var isDone: Bool
     var category: TaskCategory
     var tint: String
@@ -42,11 +43,12 @@ struct Task: Codable, Identifiable {
         }
     }
     
-    init(id: String, title: String, detail:String, image: UIImage?,  createDate: Date, isDone: Bool, tint: String, category: TaskCategory) {
+    init(id: String, title: String, detail:String, image: UIImage?, dueDate: TimeInterval ,createDate: TimeInterval, isDone: Bool, tint: String, category: TaskCategory) {
         self.id = id
         self.title = title
         self.detail = detail
         self.imageData = image?.jpegData(compressionQuality: 0.7)
+        self.dueDate = dueDate
         self.createDate = createDate
         self.isDone = isDone
         self.tint = tint

@@ -14,7 +14,7 @@ struct MainView: View {
             if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty{
                 TabView{
                    // TodoView(userId: viewModel.currentUserId)
-                    TodoView()
+                    TodoView(viewModel: TodoViewModel())
                         .tabItem {
                             Label("Home", systemImage: "house")
                             

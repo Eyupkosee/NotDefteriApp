@@ -10,13 +10,9 @@ import SwiftUI
 struct AddTodoView: View {
     
     @StateObject var viewModel = AddTodoViewModel()
-
-    
-   
-    
-    
     @State private var isImagePickerShowing = false
-
+    @State private var showAlert = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         
@@ -91,7 +87,7 @@ struct AddTodoView: View {
                             .font(.caption)
                             .foregroundStyle(.gray)
                         
-                        DatePicker("", selection: $viewModel.createDate)
+                        DatePicker("", selection: $viewModel.dueDate)
                             .datePickerStyle(.compact)
                             .scaleEffect(0.9,anchor: .leading)
                         
@@ -199,8 +195,12 @@ struct AddTodoView: View {
                 Spacer(minLength: 0)
                 
                 Button {
-                    // Saving Data
-                    viewModel.save()
+                    if viewModel.canSave {
+                        viewModel.save()
+                        dismiss()
+                    }else{
+                        showAlert = true
+                    }
                     
                 } label: {
                     Text("Todo Oluştur")
@@ -211,6 +211,9 @@ struct AddTodoView: View {
                         .hSpacing(.center)
                         .padding(.vertical, 12)
                         .background(Color(viewModel.tint), in: .rect(cornerRadius: 10))
+                }
+                .alert("Başlık boş bırakılamaz!", isPresented: $showAlert) {
+                    Button("Tamam", role: .cancel) { }
                 }
 //                .disabled($viewModel.title == "")
 //                .disabled($viewModel.detail == "")

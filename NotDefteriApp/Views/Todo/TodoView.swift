@@ -8,8 +8,11 @@
 import SwiftUI
 import FirebaseAuth
 
+
 struct TodoView: View {
     
+    @StateObject var viewModel : TodoViewModel
+  
     
     var body: some View {
         NavigationView {
@@ -24,7 +27,48 @@ struct TodoView: View {
                         .foregroundColor(.white)
                         .italic()
                     
+                    
+                    
+                    // Todo listesi
+                    ScrollView {
+                        if viewModel.isLoading {
+                            ProgressView("Yükleniyor...")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .padding()
+                        } else if viewModel.tasks.isEmpty {
+                            VStack(spacing: 20) {
+                                Image(systemName: "doc.text")
+                                    .font(.system(size: 50))
+                                    .foregroundColor(.green)
+                                Text("Henüz bir not bulunmuyor")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                Text("Yeni not eklemek için + butonunu kullanın")
+                                    .font(.subheadline)
+                                    .foregroundColor(.white.opacity(0.8))
+                            }
+                            .frame(maxWidth: .infinity, minHeight: 200)
+                            .padding()
+                        } else {
+                            LazyVStack(spacing: 12) {
+                                ForEach(viewModel.tasks) { task in
+                                    TodoListItemView(todo: task)
+                                        .padding(.horizontal)
+                                }
+                            }
+                            .padding(.top, 10)
+                        }
+                    }
+                    .cornerRadius(20)
+                    .padding()
+                    
+                    
+                    
+                    
+                    
+                    
                     Spacer()
+                    
                     
                     HStack {
                         Spacer()
@@ -50,5 +94,5 @@ struct TodoView: View {
 }
 
 #Preview {
-    TodoView()
+    TodoView(viewModel: TodoViewModel())
 }

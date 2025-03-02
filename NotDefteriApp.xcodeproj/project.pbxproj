@@ -50,8 +50,11 @@
 		C83F60A82D70A097003CD40D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F60A72D70A097003CD40D /* ProfileView.swift */; };
 		C83F60AD2D70A20C003CD40D /* BackgroundTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F60AC2D70A20C003CD40D /* BackgroundTheme.swift */; };
 		C83F60AF2D70A282003CD40D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F60AE2D70A282003CD40D /* Color.swift */; };
+		C877A5802D74680100169C95 /* TodoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877A57F2D74680100169C95 /* TodoListItemViewModel.swift */; };
+		C877A5822D74681A00169C95 /* TodoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877A5812D74681A00169C95 /* TodoListItemView.swift */; };
+		C877A5842D746AD900169C95 /* Date+TımeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877A5832D746AD900169C95 /* Date+TımeInterval.swift */; };
+		C877A5862D74824700169C95 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877A5852D74824700169C95 /* TodoViewModel.swift */; };
 		C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */; };
-		C89BD7E02D710677001FE1B3 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */; };
 		C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7E12D711479001FE1B3 /* AddTodoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +79,11 @@
 		C83F60A72D70A097003CD40D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C83F60AC2D70A20C003CD40D /* BackgroundTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTheme.swift; sourceTree = "<group>"; };
 		C83F60AE2D70A282003CD40D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C877A57F2D74680100169C95 /* TodoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListItemViewModel.swift; sourceTree = "<group>"; };
+		C877A5812D74681A00169C95 /* TodoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListItemView.swift; sourceTree = "<group>"; };
+		C877A5832D746AD900169C95 /* Date+TımeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TımeInterval.swift"; sourceTree = "<group>"; };
+		C877A5852D74824700169C95 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		C89BD7E12D711479001FE1B3 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,8 +195,9 @@
 				C83F60952D706DB2003CD40D /* RegisterViewModel.swift */,
 				C83F609D2D70852F003CD40D /* LoginViewModel.swift */,
 				C83F60A32D708A9A003CD40D /* MainViewModel.swift */,
-				C89BD7DF2D710677001FE1B3 /* TaskViewModel.swift */,
 				C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */,
+				C877A57F2D74680100169C95 /* TodoListItemViewModel.swift */,
+				C877A5852D74824700169C95 /* TodoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 				C83F60AE2D70A282003CD40D /* Color.swift */,
 				C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */,
 				C819502A2D71D3AF00D8AC4D /* +Views.swift */,
+				C877A5832D746AD900169C95 /* Date+TımeInterval.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			children = (
 				C83F60A52D708B22003CD40D /* TodoView.swift */,
 				C89BD7E12D711479001FE1B3 /* AddTodoView.swift */,
+				C877A5812D74681A00169C95 /* TodoListItemView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83F60632D706597003CD40D /* Task.swift in Sources */,
+				C877A5842D746AD900169C95 /* Date+TımeInterval.swift in Sources */,
 				C83F60A82D70A097003CD40D /* ProfileView.swift in Sources */,
 				C83F60982D706F1E003CD40D /* Encodable.swift in Sources */,
 				C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */,
@@ -352,13 +362,15 @@
 				C83F60A62D708B22003CD40D /* TodoView.swift in Sources */,
 				C83F60AF2D70A282003CD40D /* Color.swift in Sources */,
 				C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */,
+				C877A5802D74680100169C95 /* TodoListItemViewModel.swift in Sources */,
+				C877A5822D74681A00169C95 /* TodoListItemView.swift in Sources */,
 				C83F609E2D70852F003CD40D /* LoginViewModel.swift in Sources */,
 				C83F60AD2D70A20C003CD40D /* BackgroundTheme.swift in Sources */,
 				C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */,
 				C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */,
 				C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */,
-				C89BD7E02D710677001FE1B3 /* TaskViewModel.swift in Sources */,
 				C83F60612D706590003CD40D /* User.swift in Sources */,
+				C877A5862D74824700169C95 /* TodoViewModel.swift in Sources */,
 				C83F60A42D708A9A003CD40D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
