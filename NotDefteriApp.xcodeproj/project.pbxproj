@@ -56,6 +56,8 @@
 		C877A5882D75187900169C95 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C877A5872D75187900169C95 /* ProfileView.swift */; };
 		C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */; };
 		C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD7E12D711479001FE1B3 /* AddTodoView.swift */; };
+		C8EBFD8B2D770F24000FC225 /* TodoDetailAndDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFD8A2D770F24000FC225 /* TodoDetailAndDeleteView.swift */; };
+		C8EBFD8D2D772141000FC225 /* TodoDetailAndDeleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EBFD8C2D772140000FC225 /* TodoDetailAndDeleteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		C877A5872D75187900169C95 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C89BD7E12D711479001FE1B3 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		C8EBFD8A2D770F24000FC225 /* TodoDetailAndDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailAndDeleteView.swift; sourceTree = "<group>"; };
+		C8EBFD8C2D772140000FC225 /* TodoDetailAndDeleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailAndDeleteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 				C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */,
 				C877A57F2D74680100169C95 /* TodoListItemViewModel.swift */,
 				C877A5852D74824700169C95 /* TodoViewModel.swift */,
+				C8EBFD8C2D772140000FC225 /* TodoDetailAndDeleteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				C83F60A52D708B22003CD40D /* TodoView.swift */,
 				C89BD7E12D711479001FE1B3 /* AddTodoView.swift */,
 				C877A5812D74681A00169C95 /* TodoListItemView.swift */,
+				C8EBFD8A2D770F24000FC225 /* TodoDetailAndDeleteView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EBFD8B2D770F24000FC225 /* TodoDetailAndDeleteView.swift in Sources */,
 				C83F60632D706597003CD40D /* Task.swift in Sources */,
 				C877A5842D746AD900169C95 /* Date+TımeInterval.swift in Sources */,
 				C83F60982D706F1E003CD40D /* Encodable.swift in Sources */,
@@ -365,6 +372,7 @@
 				C877A5822D74681A00169C95 /* TodoListItemView.swift in Sources */,
 				C83F609E2D70852F003CD40D /* LoginViewModel.swift in Sources */,
 				C83F60AD2D70A20C003CD40D /* BackgroundTheme.swift in Sources */,
+				C8EBFD8D2D772141000FC225 /* TodoDetailAndDeleteViewModel.swift in Sources */,
 				C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */,
 				C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */,
 				C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */,
