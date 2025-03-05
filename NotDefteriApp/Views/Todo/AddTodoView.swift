@@ -197,6 +197,7 @@ struct AddTodoView: View {
                 Button {
                     if viewModel.canSave {
                         viewModel.save()
+                        NotificationManager.shared.scheduleNotifications()
                         dismiss()
                     }else{
                         showAlert = true
@@ -215,10 +216,6 @@ struct AddTodoView: View {
                 .alert("Başlık boş bırakılamaz!", isPresented: $showAlert) {
                     Button("Tamam", role: .cancel) { }
                 }
-//                .disabled($viewModel.title == "")
-//                .disabled($viewModel.detail == "")
-//                .opacity($viewModel.title == "" ? 0.5 : 1)
-//                .opacity($viewModel.detail == "" ? 0.5 : 1)
                        
             }
             .padding(.horizontal, 15)

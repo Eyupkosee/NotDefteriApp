@@ -13,6 +13,7 @@
 		C821163F2D77A90B003AB9F1 /* Lottie-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C821163E2D77A90B003AB9F1 /* Lottie-Dynamic */; };
 		C82116422D77A9A7003AB9F1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82116412D77A9A7003AB9F1 /* SplashView.swift */; };
 		C82116462D77AB59003AB9F1 /* SplashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = C82116452D77AB59003AB9F1 /* SplashAnimation.json */; };
+		C83114D62D77BB5900085ED6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83114D52D77BB5900085ED6 /* NotificationManager.swift */; };
 		C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F604D2D705FD7003CD40D /* NotDefteriAppApp.swift */; };
 		C83F60522D705FD9003CD40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83F60512D705FD9003CD40D /* Assets.xcassets */; };
 		C83F60552D705FD9003CD40D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83F60542D705FD9003CD40D /* Preview Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
 		C82116412D77A9A7003AB9F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C82116452D77AB59003AB9F1 /* SplashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SplashAnimation.json; sourceTree = "<group>"; };
+		C83114D52D77BB5900085ED6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		C83F604A2D705FD7003CD40D /* NotDefteriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotDefteriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83F604D2D705FD7003CD40D /* NotDefteriAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDefteriAppApp.swift; sourceTree = "<group>"; };
 		C83F60512D705FD9003CD40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */,
 				C819502A2D71D3AF00D8AC4D /* +Views.swift */,
 				C877A5832D746AD900169C95 /* Date+TımeInterval.swift */,
+				C83114D52D77BB5900085ED6 /* NotificationManager.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				C877A5842D746AD900169C95 /* Date+TımeInterval.swift in Sources */,
 				C83F60982D706F1E003CD40D /* Encodable.swift in Sources */,
 				C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */,
+				C83114D62D77BB5900085ED6 /* NotificationManager.swift in Sources */,
 				C83F60962D706DB2003CD40D /* RegisterViewModel.swift in Sources */,
 				C83F60A22D708A14003CD40D /* MainView.swift in Sources */,
 				C83F60A02D708552003CD40D /* LoginView.swift in Sources */,

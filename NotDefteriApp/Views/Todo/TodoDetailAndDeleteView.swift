@@ -191,6 +191,7 @@ struct TodoDetailAndDeleteView: View {
                     Button(action: {
                         if viewModel.canUpdate {
                             viewModel.updateTodo()
+                            NotificationManager.shared.scheduleNotifications()
                             dismiss()
                         } else {
                             showAlert = true

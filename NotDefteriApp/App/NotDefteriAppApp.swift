@@ -11,9 +11,10 @@ import FirebaseCore
 
 @main
 struct NotDefteriAppApp: App {
-    
     init(){
         FirebaseApp.configure()
+        NotificationManager.shared.requestPermission()
+        NotificationManager.shared.scheduleNotifications()
     }
     
     var body: some Scene {
@@ -22,3 +23,4 @@ struct NotDefteriAppApp: App {
         }
     }
 }
+
