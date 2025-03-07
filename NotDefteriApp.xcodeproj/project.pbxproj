@@ -10,6 +10,8 @@
 		C800BE122D79D66400390D3C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800BE112D79D66400390D3C /* ProfileViewModel.swift */; };
 		C80F67CB2D7B359800C2BD95 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F67CA2D7B359800C2BD95 /* ChangePasswordView.swift */; };
 		C80F67CD2D7B35A900C2BD95 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F67CC2D7B35A900C2BD95 /* ChangePasswordViewModel.swift */; };
+		C80F67CF2D7BA95B00C2BD95 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F67CE2D7BA95B00C2BD95 /* ForgotPasswordView.swift */; };
+		C80F67D12D7BAA3100C2BD95 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80F67D02D7BAA3100C2BD95 /* ForgotPasswordViewModel.swift */; };
 		C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502A2D71D3AF00D8AC4D /* +Views.swift */; };
 		C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */; };
 		C821163D2D77A90B003AB9F1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C821163C2D77A90B003AB9F1 /* Lottie */; };
@@ -72,6 +74,8 @@
 		C800BE112D79D66400390D3C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C80F67CA2D7B359800C2BD95 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		C80F67CC2D7B35A900C2BD95 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		C80F67CE2D7BA95B00C2BD95 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		C80F67D02D7BAA3100C2BD95 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		C819502A2D71D3AF00D8AC4D /* +Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Views.swift"; sourceTree = "<group>"; };
 		C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
 		C82116412D77A9A7003AB9F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				C8EBFD8C2D772140000FC225 /* TodoDetailAndDeleteViewModel.swift */,
 				C800BE112D79D66400390D3C /* ProfileViewModel.swift */,
 				C80F67CC2D7B35A900C2BD95 /* ChangePasswordViewModel.swift */,
+				C80F67D02D7BAA3100C2BD95 /* ForgotPasswordViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				C83F609F2D708551003CD40D /* LoginView.swift */,
 				C83F60992D707053003CD40D /* RegisterView.swift */,
 				C80F67CA2D7B359800C2BD95 /* ChangePasswordView.swift */,
+				C80F67CE2D7BA95B00C2BD95 /* ForgotPasswordView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -414,10 +420,12 @@
 				C8EBFD8D2D772141000FC225 /* TodoDetailAndDeleteViewModel.swift in Sources */,
 				C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */,
 				C83F604E2D705FD7003CD40D /* NotDefteriAppApp.swift in Sources */,
+				C80F67D12D7BAA3100C2BD95 /* ForgotPasswordViewModel.swift in Sources */,
 				C89BD7DE2D71058C001FE1B3 /* ImagePicker.swift in Sources */,
 				C83F60612D706590003CD40D /* User.swift in Sources */,
 				C877A5862D74824700169C95 /* TodoViewModel.swift in Sources */,
 				C877A5882D75187900169C95 /* ProfileView.swift in Sources */,
+				C80F67CF2D7BA95B00C2BD95 /* ForgotPasswordView.swift in Sources */,
 				C83F60A42D708A9A003CD40D /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

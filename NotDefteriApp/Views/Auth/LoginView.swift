@@ -62,6 +62,15 @@ struct LoginView: View {
                             .cornerRadius(10)
                     }
                     .padding(.top, 10)
+                    
+                    NavigationLink {
+                        ForgotPasswordView()
+                    } label: {
+                        Text("Şifremi Unuttum")
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                    }
+                    .padding(.top,20)
                 }
                 .padding(.horizontal, 30)
                 
