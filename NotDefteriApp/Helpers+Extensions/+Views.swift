@@ -24,4 +24,13 @@ extension View {
         return Calendar.current.isDate(date1, inSameDayAs: date2)
     }
     
+    //Kullanıcı ekrana dokunduğunda klavyeyi kapatır.
+    func hideKeyboardWhenTappedAround() -> some View {
+        self.onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
+    }
+    
+   
+  
 }

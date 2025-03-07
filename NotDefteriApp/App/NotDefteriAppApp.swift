@@ -11,6 +11,9 @@ import FirebaseCore
 
 @main
 struct NotDefteriAppApp: App {
+    
+    @StateObject private var viewModel = ProfileViewModel()
+    
     init(){
         FirebaseApp.configure()
         NotificationManager.shared.requestPermission()
@@ -20,6 +23,8 @@ struct NotDefteriAppApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(viewModel)
+                .preferredColorScheme(viewModel.isDarkMode ? .dark : .light)
         }
     }
 }

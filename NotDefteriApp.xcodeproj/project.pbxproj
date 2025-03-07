@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C800BE122D79D66400390D3C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800BE112D79D66400390D3C /* ProfileViewModel.swift */; };
 		C819502B2D71D3AF00D8AC4D /* +Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502A2D71D3AF00D8AC4D /* +Views.swift */; };
 		C819502D2D720C0800D8AC4D /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */; };
 		C821163D2D77A90B003AB9F1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C821163C2D77A90B003AB9F1 /* Lottie */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C800BE112D79D66400390D3C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C819502A2D71D3AF00D8AC4D /* +Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Views.swift"; sourceTree = "<group>"; };
 		C819502C2D720C0800D8AC4D /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
 		C82116412D77A9A7003AB9F1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				C877A57F2D74680100169C95 /* TodoListItemViewModel.swift */,
 				C877A5852D74824700169C95 /* TodoViewModel.swift */,
 				C8EBFD8C2D772140000FC225 /* TodoDetailAndDeleteViewModel.swift */,
+				C800BE112D79D66400390D3C /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				C8EBFD8B2D770F24000FC225 /* TodoDetailAndDeleteView.swift in Sources */,
 				C83F60632D706597003CD40D /* Task.swift in Sources */,
 				C82116422D77A9A7003AB9F1 /* SplashView.swift in Sources */,
+				C800BE122D79D66400390D3C /* ProfileViewModel.swift in Sources */,
 				C877A5842D746AD900169C95 /* Date+TımeInterval.swift in Sources */,
 				C83F60982D706F1E003CD40D /* Encodable.swift in Sources */,
 				C89BD7E22D711479001FE1B3 /* AddTodoView.swift in Sources */,

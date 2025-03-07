@@ -38,14 +38,14 @@ struct LoginView: View {
                     // Email alanı
                     TextField("Email Adresi", text: $viewModel.email)
                         .padding()
-                        .background(Color.white.opacity(0.7))
+                        .background(Color("textViewColor"))
                         .cornerRadius(8)
                         .foregroundColor(.black)
                     
                     // Password alanı
                     SecureField("Şifre", text: $viewModel.password)
                         .padding()
-                        .background(Color.white.opacity(0.7))
+                        .background(Color("textViewColor"))
                         .cornerRadius(8)
                         .foregroundColor(.black)
                     
@@ -82,6 +82,7 @@ struct LoginView: View {
                 }
                 .padding(.bottom, 50)
             }
+            .hideKeyboardWhenTappedAround()
         }
         .navigationBarHidden(true)
     }

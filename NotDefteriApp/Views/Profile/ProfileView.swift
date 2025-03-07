@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct ProfileView: View {
+    @EnvironmentObject var viewModel: ProfileViewModel 
     @State private var showLogoutAlert = false
     
     
@@ -22,7 +23,7 @@ struct ProfileView: View {
                 
                 Text("Not Defteri")
                     .font(.system(size: 36, weight: .bold))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color("textViewColor"))
                     .italic()
                     .padding(.top, 10)
                 
@@ -36,8 +37,9 @@ struct ProfileView: View {
                             .font(.headline)
                             .foregroundColor(.blue)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(height: 36)
                             .padding()
-                            .background(Color.white)
+                            .background(Color("textViewColor"))
                             .cornerRadius(10)
                             .shadow(radius: 5)
                     }
@@ -50,11 +52,24 @@ struct ProfileView: View {
                             .font(.headline)
                             .foregroundColor(.blue)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(height: 36)
                             .padding()
-                            .background(Color.white)
+                            .background(Color("textViewColor"))
                             .cornerRadius(10)
                             .shadow(radius: 5)
                     }
+                    
+                    // Dark Mode Toggle
+                    Toggle("Dark Mode", isOn: $viewModel.isDarkMode)
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(height: 36)
+                        .padding()
+                        .background(Color("textViewColor"))
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                    
                     
                     Button(action: {
                         showLogoutAlert = true
@@ -63,8 +78,9 @@ struct ProfileView: View {
                             .font(.headline)
                             .foregroundColor(.red)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(height: 36)
                             .padding()
-                            .background(Color.white)
+                            .background(Color("textViewColor"))
                             .cornerRadius(10)
                             .shadow(radius: 5)
                     }
@@ -77,7 +93,7 @@ struct ProfileView: View {
                             }
                         }, secondaryButton: .cancel())
                     }
-
+                    
                     
                     
                     

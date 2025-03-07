@@ -36,6 +36,14 @@ class NotificationManager {
 
     
     private func fetchTasks(completion: @escaping ([Task]) -> Void) {
+        
+        guard !userId.isEmpty else {
+               print("Hata: Kullanıcı oturumu açık değil.")
+               completion([])
+               return
+           }
+        
+        
         db.collection("users").document(userId).collection("todos").getDocuments { snapshot, error in
             guard let documents = snapshot?.documents, error == nil else {
                 print("Error fetching tasks: \(error?.localizedDescription ?? "Unknown error")")

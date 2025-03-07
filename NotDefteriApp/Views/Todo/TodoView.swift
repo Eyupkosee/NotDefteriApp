@@ -22,17 +22,25 @@ struct TodoView: View {
                 VStack {
                     Text("Notlarım")
                         .font(.system(size: 36, weight: .bold))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("textViewColor"))
                         .italic()
                         .padding(.top, 10)
                     
                     
                     // Arama Çubuğu ve Kategori Seçici
                     HStack {
-                        TextField("Notlarda ara...", text: $viewModel.searchText)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(minWidth: 200, maxWidth: .infinity)
-                            .padding(.leading)
+                        ZStack {
+                            Color("textViewColor") 
+                                .cornerRadius(10)
+                                .shadow(color: .black.opacity(0.25), radius: 2)
+
+                            TextField("Notlarda ara...", text: $viewModel.searchText)
+                                .padding(10)
+                                .foregroundColor(Color("textColor"))
+                        }
+                        .frame(minWidth: 200, maxWidth: .infinity)
+                        .frame(height: 40)
+                        .padding(.leading)
                         
                         Picker("Kategori", selection: $viewModel.selectedCategory) {
                             Text("Tümü").tag(TaskCategory?.none)
@@ -42,9 +50,10 @@ struct TodoView: View {
                         }
                         .pickerStyle(MenuPickerStyle())
                         .frame(width: 110)
-                        .tint(.white)
+                        .tint(Color("textViewColor"))
                     }
                     .padding(.horizontal)
+
                     
                     
                     
@@ -103,6 +112,7 @@ struct TodoView: View {
                         .padding(.bottom, 20)
                     }
                 }
+                .hideKeyboardWhenTappedAround()
             }
     }
 }

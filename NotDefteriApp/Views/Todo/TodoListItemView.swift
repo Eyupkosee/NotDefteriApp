@@ -34,7 +34,7 @@ struct TodoListItemView: View {
                     if let detail = todo.detail, !detail.isEmpty {
                         Text(detail)
                             .font(.subheadline)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.gray)
                             .lineLimit(1)
                             .truncationMode(.tail)
                     }
@@ -45,7 +45,7 @@ struct TodoListItemView: View {
                         Text(todo.dueDate.formatAsTime())
                             .font(.caption)
                     }
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.gray)
                 }
                 
                 Spacer()

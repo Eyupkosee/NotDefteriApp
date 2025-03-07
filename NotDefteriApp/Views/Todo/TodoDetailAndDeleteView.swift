@@ -34,7 +34,7 @@ struct TodoDetailAndDeleteView: View {
                         .padding(.vertical, 10)
                         .padding(.horizontal, 15)
                         .font(.system(size: 18, weight: .bold, design: .rounded))
-                        .background(Color.white.shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
+                        .background(Color("textViewColor").shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
                 }
                 
                 VStack(alignment: .leading, spacing: 8) {
@@ -44,11 +44,11 @@ struct TodoDetailAndDeleteView: View {
                     
                     TextEditor(text: $viewModel.detail)
                         .frame(height: UIScreen.main.bounds.height / 9)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("textColor"))
                         .font(.system(size: 18, weight: .regular, design: .rounded))
                         .padding(.vertical, 10)
                         .padding(.horizontal, 15)
-                        .background(Color.white.shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
+                        .background(Color("textViewColor").shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
                 }
                 
                 HStack(spacing: 12){
@@ -231,6 +231,7 @@ struct TodoDetailAndDeleteView: View {
             }
             .padding(.horizontal, 15)
         }
+        .hideKeyboardWhenTappedAround()
     }
 }
 

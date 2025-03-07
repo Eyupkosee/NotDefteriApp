@@ -28,7 +28,7 @@ struct AddTodoView: View {
                         .padding(.vertical, 10)
                         .padding(.horizontal,15)
                         .font(.system(size: 18, weight: .bold, design: .rounded))
-                        .background(.white.shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
+                        .background(Color("textViewColor").shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
                     
                 })
                 .padding(.top,5)
@@ -44,7 +44,8 @@ struct AddTodoView: View {
                         .font(.system(size: 18, weight: .regular, design: .rounded))
                         .padding(.vertical, 10)
                         .padding(.horizontal,15)
-                        .background(.white.shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
+                        .background(Color("textViewColor").shadow(.drop(color: .black.opacity(0.25), radius: 2)), in: .rect(cornerRadius: 10))
+                        .scrollContentBackground(.hidden)
                     
                 })
                 .padding(.top,5)
@@ -79,7 +80,7 @@ struct AddTodoView: View {
                     
                 })
                 .padding(.top,5)
-
+                
                 
                 HStack(spacing: 12){
                     VStack(alignment: .leading, spacing: 8, content: {
@@ -101,7 +102,7 @@ struct AddTodoView: View {
                             .foregroundStyle(.gray)
                         
                         let colors : [String] = (1...5).compactMap { index -> String in
-                                return "taskColor\(index)"
+                            return "taskColor\(index)"
                         }
                         
                         HStack(spacing: 2){
@@ -130,8 +131,8 @@ struct AddTodoView: View {
                 }
                 .padding(.top,5)
                 
-
-             
+                
+                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Todo Görseli")
                         .font(.caption)
@@ -162,7 +163,7 @@ struct AddTodoView: View {
                                             Text("Fotoğraf ekle")
                                                 .font(.subheadline)
                                         }
-                                        .foregroundColor(.gray)
+                                            .foregroundColor(.gray)
                                     )
                             }
                         }
@@ -188,7 +189,7 @@ struct AddTodoView: View {
                     }
                 }
                 .padding(.top, 5)
-
+                
                 
                 
                 
@@ -216,12 +217,12 @@ struct AddTodoView: View {
                 .alert("Başlık boş bırakılamaz!", isPresented: $showAlert) {
                     Button("Tamam", role: .cancel) { }
                 }
-                       
+                
             }
             .padding(.horizontal, 15)
-
+            
         }
-       
+        .hideKeyboardWhenTappedAround()
     }
 }
 
