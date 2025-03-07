@@ -1,15 +1,16 @@
 //
-//  RegisterView.swift
+//  ChangePasswordView.swift
 //  NotDefteriApp
 //
-//  Created by eyüp köse on 27.02.2025.
+//  Created by eyüp köse on 7.03.2025.
 //
 
 import SwiftUI
 
-struct RegisterView: View {
-    @StateObject var viewModel = RegisterViewModel()
+struct ChangePasswordView: View {
+    @StateObject var viewModel = ChangePasswordViewModel()
     @Environment(\.presentationMode) var presentationMode
+
     
     var body: some View {
         ZStack {
@@ -24,7 +25,7 @@ struct RegisterView: View {
                     .foregroundColor(.white)
                     .padding(.top, 50)
                 
-                Text("Hesap Oluştur")
+                Text("Şifreyi Sıfırla")
                     .font(.system(size: 28, weight: .medium))
                     .foregroundColor(.white)
                     .padding(.bottom, 40)
@@ -37,27 +38,26 @@ struct RegisterView: View {
                         Text(viewModel.errorMessage)
                             .foregroundColor(.red)
                             .padding()
-                            .background(Color.white.opacity(0.7))
+                            .background(Color("textViewColor"))
                             .cornerRadius(8)
                     }
                     
-                    TextField("Ad ve Soyad", text: $viewModel.name)
+                    // eski şifre Şifre alanı
+                    SecureField("Mevcut Şifre", text: $viewModel.oldPassword)
                         .padding()
                         .background(Color("textViewColor"))
                         .cornerRadius(8)
                         .foregroundColor(.black)
                     
-                    // Email alanı
-                    TextField("Email", text: $viewModel.email)
+                    // yeni Şifre alanı
+                    SecureField("Yeni Şifre", text: $viewModel.newPassword)
                         .padding()
                         .background(Color("textViewColor"))
                         .cornerRadius(8)
                         .foregroundColor(.black)
-                        .keyboardType(.emailAddress)
-                        .autocapitalization(.none)
                     
-                    // Şifre alanı
-                    SecureField("Şifre", text: $viewModel.password)
+                    // yeni Şifre onay alanı
+                    SecureField("Yeni Şifre Onayla", text: $viewModel.newPasswordConfirm)
                         .padding()
                         .background(Color("textViewColor"))
                         .cornerRadius(8)
@@ -65,9 +65,9 @@ struct RegisterView: View {
                     
                     // Kayıt butonu
                     Button {
-                        viewModel.register()
+                        viewModel.changePassword()
                     } label: {
-                        Text("Hesap Oluştur")
+                        Text("ŞİFREYİ GÜNCELLE")
                             .font(.headline)
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
@@ -87,7 +87,7 @@ struct RegisterView: View {
                 } label: {
                     HStack {
                         Image(systemName: "arrow.left")
-                        Text("Giriş Sayfasına Dön")
+                        Text("Profil Sayfasına Dön")
                     }
                     .foregroundColor(.white)
                     .padding(.bottom, 30)
@@ -100,5 +100,5 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView()
+    ChangePasswordView()
 }

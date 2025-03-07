@@ -45,9 +45,7 @@ struct ProfileView: View {
                     }
                     
                     
-                    Button(action: {
-                        
-                    }) {
+                    NavigationLink(destination: ChangePasswordView()) {
                         Text("Şifre Değiştir")
                             .font(.headline)
                             .foregroundColor(.blue)
@@ -58,6 +56,7 @@ struct ProfileView: View {
                             .cornerRadius(10)
                             .shadow(radius: 5)
                     }
+                    .buttonStyle(PlainButtonStyle()) 
                     
                     // Dark Mode Toggle
                     Toggle("Dark Mode", isOn: $viewModel.isDarkMode)
