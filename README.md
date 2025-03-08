@@ -118,21 +118,14 @@ To manually add these dependencies if needed:
 
 1. Select your target device or simulator in Xcode
 2. Build and run the project (⌘+R)
-3. Register a new account or use the demo account:
-   - Email: demo@example.com
-   - Password: demo123
+3. Register a new account
 
 ---
 
 ## Contributing
 
 - **🐛 [Report Issues](https://github.com/Eyupkosee/NotDefteriApp/issues)**: Submit bugs found or log feature requests
-- **💡 [Submit Pull Requests](https://github.com/Eyupkosee/NotDefteriApp/pulls)**: Contribute your improvements to the project
 
 ---
 
-## License
 
-This project is protected under the MIT License. For more details, refer to the [LICENSE](LICENSE) file.
-
----
