@@ -1,5 +1,5 @@
 <div align="left" style="position: relative;">
-<img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" align="right" width="30%" style="margin: -20px 0 0 20px;">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/89103093/420544787-5f3d5431-891e-4b0e-931b-41f05abdb0fe.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250308T005037Z&X-Amz-Expires=300&X-Amz-Signature=468f4b7fc9ee5d84ee031da76390685ad4c671e7231a7dac0efc4537750b6dfc&X-Amz-SignedHeaders=host" align="right" width="30%" style="margin: -20px 0 0 20px;">
 <h1>NOTDEFTERIAPP</h1>
 <p align="left">
 	<img src="https://img.shields.io/github/license/Eyupkosee/NotDefteriApp?style=default&logo=opensourceinitiative&logoColor=white&color=6b9adc" alt="license">
