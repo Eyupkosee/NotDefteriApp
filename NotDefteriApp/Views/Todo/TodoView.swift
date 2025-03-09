@@ -112,8 +112,8 @@ struct TodoView: View {
                         .padding(.bottom, 20)
                     }
                 }
-                .hideKeyboardWhenTappedAround()
             }
+            .hideKeyboardWhenTappedAround()
     }
 }
 #Preview {
