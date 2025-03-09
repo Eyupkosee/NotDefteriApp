@@ -78,9 +78,9 @@ struct ForgotPasswordView: View {
                     .padding(.bottom, 30)
                 }
             }
-            .hideKeyboardWhenTappedAround()
         }
         .navigationBarHidden(true)
+        .hideKeyboardWhenTappedAround()
     }
 }
 

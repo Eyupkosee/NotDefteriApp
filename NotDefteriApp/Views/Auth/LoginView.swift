@@ -91,9 +91,9 @@ struct LoginView: View {
                 }
                 .padding(.bottom, 50)
             }
-            .hideKeyboardWhenTappedAround()
         }
         .navigationBarHidden(true)
+        .hideKeyboardWhenTappedAround()
     }
 }
 

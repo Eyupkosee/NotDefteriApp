@@ -196,6 +196,7 @@
 				C83F605C2D70617A003CD40D /* Models */,
 				C83F605D2D706182003CD40D /* Views */,
 				C83F605E2D706186003CD40D /* ViewModels */,
+				C8931DCE2D7E56EB008AE26F /* Manager */,
 				C83F605F2D70652E003CD40D /* Helpers+Extensions */,
 				C83F60512D705FD9003CD40D /* Assets.xcassets */,
 				C83F609B2D708390003CD40D /* GoogleService-Info.plist */,
@@ -270,7 +271,6 @@
 				C89BD7DD2D71058C001FE1B3 /* ImagePicker.swift */,
 				C819502A2D71D3AF00D8AC4D /* +Views.swift */,
 				C877A5832D746AD900169C95 /* Date+TımeInterval.swift */,
-				C83114D52D77BB5900085ED6 /* NotificationManager.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -311,6 +311,14 @@
 				C8EBFD8A2D770F24000FC225 /* TodoDetailAndDeleteView.swift */,
 			);
 			path = Todo;
+			sourceTree = "<group>";
+		};
+		C8931DCE2D7E56EB008AE26F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C83114D52D77BB5900085ED6 /* NotificationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
