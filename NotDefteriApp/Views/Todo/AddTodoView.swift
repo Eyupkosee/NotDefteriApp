@@ -181,7 +181,7 @@ struct AddTodoView: View {
                             .padding(8)
                         }
                     }
-                    .sheet(isPresented: $isImagePickerShowing) {
+                    .fullScreenCover(isPresented: $isImagePickerShowing) {
                         ImagePicker(selectedImage: Binding(
                             get: { viewModel.imageData.flatMap { UIImage(data: $0) } },
                             set: { newImage in viewModel.imageData = newImage?.jpegData(compressionQuality: 1.0) }
